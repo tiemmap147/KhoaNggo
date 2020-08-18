@@ -16,7 +16,7 @@ public class home {
 			luachon=sc.nextInt();
 			switch(luachon) {
 			case 1:
-				System.out.println("=====PHIM BO=====");
+				System.out.println("=====.PHIM BO.=====");
 				break;
 			case 2:
 				System.out.println("=====PHIM LE=====");
