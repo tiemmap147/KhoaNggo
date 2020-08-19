@@ -13,7 +13,7 @@ public class home {
 			System.out.println("4. Them Phim");
 			System.out.println("5. Thoat");
 			System.out.println("Moi ban nhap lua chon: ");
-			luachon=sc.nextInt();
+			luachon=Integer.parseInt(sc.nextLine());
 			switch(luachon) {
 			case 1:
 				System.out.println("=====.PHIM BO.=====");
@@ -26,7 +26,16 @@ public class home {
 				System.out.println("=====PHIM CHIEU RAP=====");
 				break;
 			case 4:
+				int n;
 				System.out.println("=====QUAN LY PHIM=====");
+				System.out.println("Moi nhap so bo phim muon them: ");
+				n=Integer.parseInt(sc.nextLine());
+				for (int i=1;i<=n;i++){
+					System.out.println("Moi nhap ten phim: ");
+					String tenphim=sc.nextLine();
+
+				}
+
 				break;
 			case 5:
 				System.out.println("Goodbyee");
