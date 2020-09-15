@@ -4,10 +4,13 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner input= new Scanner(System.in);
-		int choose=Integer.parseInt(input.nextLine());
+		int choose;
 		do {
 			showMenu();
+			choose=Integer.parseInt(input.nextLine());
+			
 			switch(choose) {
+			
 			case 1:
 				System.out.println("=====.PHIM BO.=====");
 				break;
@@ -22,12 +25,6 @@ public class Main {
 				int n;
 				System.out.println("=====QUAN LY PHIM=====");
 				System.out.println("Moi nhap so bo phim muon them: ");
-				n=Integer.parseInt(input.nextLine());
-				for (int i=1;i<=n;i++){
-					System.out.println("Moi nhap ten phim: ");
-					String tenphim=input.nextLine();
-
-				}
 
 				break;
 			case 5:
@@ -35,6 +32,7 @@ public class Main {
 				break;
 			default:
 				System.out.println("Nhap sai, Moi nhap lai");
+				break;
 			}
 		}while(choose != 5);
 
@@ -50,3 +48,4 @@ public class Main {
 	}
 
 }
+ 
