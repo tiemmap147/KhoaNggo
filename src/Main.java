@@ -1,30 +1,50 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
 		Scanner input= new Scanner(System.in);
+		ArrayList<PhimBo> listphimbo=new ArrayList<>();
+		ArrayList<PhimLe> listphimle=new ArrayList<>();
 		int choose;
 		do {
 			showMenu();
 			choose=Integer.parseInt(input.nextLine());
+			int n;
 			
 			switch(choose) {
 			
 			case 1:
 				System.out.println("=====.PHIM BO.=====");
+				for(int i=0;i<listphimbo.size();i++) {
+					listphimbo.get(i).show();
+				}
 				break;
 			case 2:
 				System.out.println("=====PHIM LE=====");
 				break;
 				
 			case 3:
-				System.out.println("=====PHIM CHIEU RAP=====");
+				System.out.println("=====QUAN LY PHIM LE=====");
+				System.out.println("Moi nhap so phim muon them: ");
+				n=Integer.parseInt(input.nextLine());
+				for(int i=0;i<n;i++) {
+					PhimLe phimle=new PhimLe();
+					phimle.input();
+					listphimle.add(phimle);
+				}
 				break;
 			case 4:
-				int n;
-				System.out.println("=====QUAN LY PHIM=====");
+				System.out.println("===== QUAN LY PHIM BO =====");
 				System.out.println("Moi nhap so bo phim muon them: ");
+				n=Integer.parseInt(input.nextLine());
+				for (int i=0;i<n;i++) {
+					PhimBo phimbo=new PhimBo();
+					phimbo.input();
+					listphimbo.add(phimbo);
+					
+				}
 
 				break;
 			case 5:
